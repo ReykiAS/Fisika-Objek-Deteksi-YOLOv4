@@ -1,0 +1,20 @@
+name: yolov4-gpu
+
+channels:
+  - apple
+  - conda-forge
+dependencies:
+  - tensorflow-deps
+  - matplotlib
+  - opencv
+  - lxml
+  - tqdm
+  - flask
+  - seaborn
+  - pillow
+  - waitress
+  - paste
+  - easydict
+  - pip:
+      - tensorflow-macos
+      - tensorflow-metal

@@ -50,15 +50,18 @@ html {
 
 body, p {
 	color: #555; 
-	font: 400 1rem/1.625rem "Montserrat", sans-serif;
+	font-family: 'Poppins', sans-serif;
+
 }
 
 .p-large {
-	font: 400 1.125rem/1.75rem "Montserrat", sans-serif;
+	font-family: 'Poppins', sans-serif;
+
 }
 
 .p-small {
-	font: 400 0.875rem/1.5rem "Montserrat", sans-serif;
+	font-family: 'Poppins', sans-serif;
+
 }
 
 .p-heading {
@@ -67,32 +70,35 @@ body, p {
 
 h1 {
 	color: #333;
-	font: 700 2.75rem/3.375rem "Montserrat", sans-serif;
+	font-family: 'Poppins', sans-serif;
+
 }
 
 h2 {
 	color: #333;
-	font: 700 2.25rem/2.875rem "Montserrat", sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 h3 {
 	color: #333;
-	font: 700 1.625rem/2.125rem "Montserrat", sans-serif;
+	font-family: 'Poppins', sans-serif;
+
 }
 
 h4 {
 	color: #333;
-	font: 700 1.25rem/1.875rem "Montserrat", sans-serif;
+	font-family: 'Poppins', sans-serif;
+
 }
 
 h5 {
 	color: #333;
-	font: 700 1.125rem/1.75rem "Montserrat", sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 h6 {
 	color: #333;
-	font: 700 1rem/1.625rem "Montserrat", sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 .testimonial-text {
@@ -733,10 +739,19 @@ input[type='checkbox'] {
 	line-height: 1rem;
 	text-align: center;
 }
-
+.center {
+	margin-top: 10x;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+  }
 .header h1 {
 	margin-bottom: 0.75rem;
 	color: #eee;
+}
+.text-container h3{
+	text-align: center;
 }
 
 .header .p-large {
@@ -1572,9 +1587,13 @@ a:hover.back-to-top {
 	padding-bottom: 4rem;
 	background-color: #fbf9f5;
 }
-
+.ex-basic-2 p{
+	text-align: justify;
+}
 .ex-basic-2 h3 {
 	margin-bottom: 1rem;
+	text-align: left;
+	margin-top: 25px;
 }
 
 .ex-basic-2 .text-container {

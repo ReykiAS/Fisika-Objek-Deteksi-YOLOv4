@@ -62,6 +62,14 @@ def object_3d():
 @app.route('/page2')
 def object_3d_digital():
     return render_template('./show3d_digital.html')
+@app.route('/page3')
+def object_3d_catu():
+    return render_template('./show3d_catu.html')
+@app.route('/page4')
+def object_3d_timer():
+    return render_template('./show3d_timer.html')
+    
+    
     
     
 
@@ -147,6 +155,11 @@ def get_image_by_image_file():
             webbrowser.open_new('http://127.0.0.1:5050/page1')
         elif aa =="digital_multitester":
             webbrowser.open_new('http://127.0.0.1:5050/page2')
+        elif aa =="catu_daya":
+            webbrowser.open_new('http://127.0.0.1:5050/page3')
+        elif aa =="timer_counter":
+            webbrowser.open_new('http://127.0.0.1:5050/page4')
+        elif aa =="pesawat_atwood":
 
     pred_bbox = [boxes.numpy(), scores.numpy(), classes.numpy(), valid_detections.numpy()]
 

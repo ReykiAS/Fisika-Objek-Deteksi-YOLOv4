@@ -68,6 +68,9 @@ def object_3d_catu():
 @app.route('/page4')
 def object_3d_timer():
     return render_template('./show3d_timer.html')
+@app.route('/page5')
+def object_3d_pesawat():
+    return render_template('./show3d_pesawat.html')
     
     
     
@@ -160,6 +163,7 @@ def get_image_by_image_file():
         elif aa =="timer_counter":
             webbrowser.open_new('http://127.0.0.1:5050/page4')
         elif aa =="pesawat_atwood":
+            webbrowser.open_new('http://127.0.0.1:5050/page5')
 
     pred_bbox = [boxes.numpy(), scores.numpy(), classes.numpy(), valid_detections.numpy()]
 

@@ -38,6 +38,7 @@ window.onload = () => {
 };
 
 
+
 function readUrl(input) {
   imagebox = $('#imagebox')
   console.log("evoked readUrl")
@@ -47,11 +48,12 @@ function readUrl(input) {
       // console.log(e)
 
       imagebox.attr('src', e.target.result);
-      imagebox.height(500);
-      imagebox.width(800);
+      imagebox.height(1875);
+      imagebox.width(339);
     }
     reader.readAsDataURL(input.files[0]);
   }
 
 
 }
+

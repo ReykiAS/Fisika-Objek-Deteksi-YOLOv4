@@ -18,7 +18,7 @@ import os
 import json
 import requests
 import webbrowser
-
+video = cv2.VideoCapture(0)
 
 framework = 'tf'
 weights_path = './checkpoints/yolov4-416'
@@ -86,8 +86,33 @@ def object_3d_osiloskop():
 @app.route('/page10')
 def object_3d_getaran():
     return render_template('./show3d_getaran.html')
+@app.route('/camera')
+def camera():
+    return render_template('./camera.html')
 
 
+@app.route('/takeimage', methods = ['POST'])
+def takeimage():
+    name = request.form['name']
+    print(name)
+    _, frame = video.read()
+    cv2.imwrite(f'{name}.jpg', frame)
+    return Response(status = 200)
+
+
+def gen():
+    """Video streaming generator function."""
+    while True:
+        rval, frame = video.read()
+        cv2.imwrite('t.jpg', frame)
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + open('t.jpg', 'rb').read() + b'\r\n')
+
+
+@app.route('/video_feed')
+def video_feed():
+    """Video streaming route. Put this in the src attribute of an img tag."""
+    return Response(gen(),mimetype='multipart/x-mixed-replace; boundary=frame')
 
 # API that returns image with detections on it
 @app.route('/image/by-image-file', methods=['GET','POST'])
